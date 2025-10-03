@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>RegExp</title>
+        <meta charset="utf-8" />
+        <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script>
+
+            var nome;
+            var ape;
+            var nif;
+            var cadena = "";
+            
+            function comprobar(){ 
+             nome = document.getElementById("nome").value;
+             ape = document.getElementById("apelidos").value;
+             nif = document.getElementById("nif").value; 
+            var patronnome = /^[A-Z]{1}[a-z]/;
+            if (nome.match(patronnome)){
+                var patronapellido = /^[A-Z]{1}[a-z\s]/;
+                if (ape.match(patronapellido)){
+                    var patron = /^\d{8}-?[A-Z]{1}$/;
+                        if (nif.match(patron)) {
+                            document.getElementById("matricula").innerHTML=("<label>Matricula </label><input type='text' name='mat' id='mat' placeholder='Exemplo: 1234 AAA'/> <input type='button' name='comprobarmat' id='comprobarmat' value='Comprobar Matricula' onclick='comprobarMat()'>" + "<br>"+ "<input type='button' name='listamat' id='listamat' value='Lista de Matriculas' onclick='mostrar()'>");  
+                            document.getElementById("nome").disabled = true;
+                            document.getElementById("apelidos").disabled = true;
+                            document.getElementById("nif").disabled = true;
+                            document.getElementById("comprobar").disabled = true; 
+                        } else { alert("El formato del formulario de "+nome+" "+ape+" NO es correcto.");}
+                } else {
+                    alert("Apelido mal escrito");}
+            } else {
+                alert("Nome mal escrito");}
+            }
+            
+            function comprobarMat(){ 
+            var mat = document.getElementById("mat").value;
+            var patronmat = /^\d{4} [A-Z]{3}$/;
+            var i = 1;
+            var j;
+            if (mat.match(patronmat)) {
+                j=i;
+                cadena = (cadena + "-Matrícula "+ j +" es: "+ mat + "\n");
+                alert("Matrícula guardada");
+                i++; }
+                else { alert("El formato de la matricula de "+nome+" "+ape+" NO es correcto.") } 
+            
+            } 
+            
+            function mostrar() {
+            alert("Nome e apelidos: " + nome +" "+ ape + "\n" +
+                "NIF: " + nif + "\n" +
+                "Lista de coches:" + "\n" + cadena)
+        }
+            // console.log("Adios");
+        </script>
+    </head>
+    <body>
+        <div>
+            <header>
+                <h1>Actividade con RegExp</h1>
+                <p>Realiza un formulario que recolla os datos dun propietario de vehículos. Deberá conter nome (id="nome" name="nome") e apelidos (id="apelidos" name="apelidos"). Nun principio nun campo pedirá o NIF (id="nif") en formato 01234567-L, onde 01234567 son díxitos e L unha letra. No momento que o NIF sexa correcto farase visible o campo de introducción da matrícula do coche en formato 1234 ABC (matriculan, onde n e a orde do número da matrícula). Se é correcto amosarase un botón que pedirá se tén mais coches e así sucesivamente ata que non teña mais coches. Ao final amosará un resumo onde se amosen todos os datos correctamente introducidos</p>
+                
+            </header>
+        </div>
+        <div>
+            <section>
+                <form name="formulario"> 
+                    <h3 for="ssn">Propietario do vehículo:</h3>
+                    <label>Nome </label><input type="text" name="nome" id="nome" /><br>
+                    <label>Apelidos </label><input type="text" name="apelidos" id="apelidos" /><br>
+                    <label>NIF </label><input type="text" name="nif" id="nif" placeholder='Exemplo: 12345678A'/>
+                </form>
+                    <input type="button" name="comprobar" id="comprobar" value="Comprobar Formato" onclick="comprobar()"/> <br>
+                    <label id="matricula"></label><br>
+                    
+                </section>
+            </div>
+        </div>
+        <a href="https://hprweb.000webhostapp.com/index.html"> Volver al Inicio</a>
+    </body>
+</html>

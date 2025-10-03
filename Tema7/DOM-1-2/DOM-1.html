@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <title>DOM-1</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="DOM-1.css"/>
+  <script type="text/javascript" src="DOM-1.js"></script>
+ </head>
+ <body onload="checkCookie()">
+  <div id="header">
+   <ul class="nav">
+    <li class="personalizado"><span ><img id="config" src="configuracion.png" alt="Configuracion"></span>
+     <ul>
+      <li><span onclick="cambiarFondoImaxe()">Imaxe</span></li>
+      <li><span onclick="cambiarFondoTextura()">Textura</span></li>
+      <li><span onclick="cambiarFondoVideo()">Video</span></li>
+      <li><span >Color</span>
+       <ul>
+        <li><span onclick="cambiarFondoRojo()">Vermello</span></li>
+        <li><span onclick="cambiarFondoVerde()">Verde</span></li>
+        <li><span onclick="cambiarFondoAzul()">Azul</span></li>
+       </ul>
+      </li>
+      <li><span >Degradado</span>
+        <ul>
+         <li><span onclick="cambiarFondoDegHorizontal()">Horizontal</span></li>
+         <li><span onclick="cambiarFondoDegRadial()">Radial</span></li>
+         <li><span onclick="cambiarFondoDegVertical()">Vertical</span></li>
+        </ul>
+       </li>
+     </ul>
+    </li>
+   </ul>
+  </div>
+  <div id="header2"><img id="logo" src="./LogoBalon.jpg" alt=""></div>
+  <div id=video> 
+  </div>
+ </body>
+</html>

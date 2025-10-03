@@ -1,0 +1,133 @@
+
+#mydiv1 {
+  left: 250px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv2 {
+  left: 50px;
+  top: 40px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv3 {
+  left: 250px;
+  top: 150px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv4 {
+  left: 50px;
+  top: 150px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv5 {
+  left: 250px;
+  top: 300px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv6 {
+  left: 50px;
+  top: 500px;
+  
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv7 {
+  left: 50px;
+  top: 350px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+#mydiv8 {
+  left: 250px;
+  top: 500px;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+}
+
+
+#mydivheader1 {
+  cursor: move;
+  z-index: 10;
+  color: #fff;
+}
+#mydivheader2 {
+
+  cursor: move;
+  z-index: 10;
+
+  color: #fff;
+}
+#mydivheader3 {
+
+  cursor: move;
+  z-index: 10;
+
+  color: #fff;
+}
+#mydivheader4 {
+
+  cursor: move;
+  z-index: 10;
+
+  color: #fff;
+}
+#mydivheader5 {
+
+  cursor: move;
+  z-index: 10;
+  
+  color: #fff;
+}
+#mydivheader6 {
+
+  cursor: move;
+  z-index: 10;
+  
+  color: #fff;
+}
+#mydivheader7 {
+  
+  cursor: move;
+  z-index: 10;
+
+  color: #fff;
+}
+#mydivheader8 {
+
+  cursor: move;
+  z-index: 10;
+  
+  color: #fff;
+}
+#imagen{
+  height: 100%;
+  padding-left: 500px;
+  top: 50px;
+  
+
+}
+#imagen2{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+body{
+  background-color: rgb(247, 210, 216);
+}
+#h2{
+  padding-left: 465px;
+}
+#ganador{
+  padding-left: 500px;
+}

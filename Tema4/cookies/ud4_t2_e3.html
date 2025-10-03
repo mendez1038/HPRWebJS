@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ejercicio Cookie 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./jquery-3.4.1.min.js"></script>
+  <style>
+    body {margin: 0;padding: 10px;min-height: 500px;position: relative;}
+    .banner {position: absolute;right: 50px;bottom: 50px;background: black;color: white;padding: 15px;display: none;}
+  </style>
+  
+</head>
+
+<body onload="checkCookie()">
+  <h1>Ejercicio Cookies 3</h1>
+  <p>Realiza un anuncio que coloque no fondo dereito á 50 pixeles do lado dereito e a 50 do fondo un anuncio que lle de
+    a benvida ao usuario e que lle recorde o tempo que leva sin visitar a nosa páxina. Se leva menos dunha semana o
+    anuncio será en fondo verde, se o tempo é superior será en vermello claro e amosará de forma destacada a mensaxe
+    ¡BENVID@ DE NOVO!.</p>
+  <div class="banner">
+    ¡BENVID@ DE NOVO!.
+  </div>
+  <script>
+    function setCookie(nome, valor, exdays) {
+      var d = new Date();
+      var fecha = d.toISOString();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toUTCString(),
+      a = valor + "&" + 'fecha=' + fecha ,
+      todo = nome + "=" + a + ';' + expires ;
+      document.cookie = todo;
+    }
+    function getCookie(par) {
+      var name = "username=";
+      var ca = document.cookie;
+      if (ca){
+        var ca = ca.split('&'),
+          c = ca[par].split('=')[1];
+        return c;
+      }else{
+        return false;
+      }
+    }
+    function checkCookie() {
+      var username = getCookie(0);
+      var fechaLastTime = getCookie(1); 
+      var fechaLastTimeDate = Date.parse(fechaLastTime);
+      var fechaNow, diferencia;
+      document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      if (username) {
+        alert("Welcome again " + username);
+        fechaNow = new Date().getTime();
+        diferencia = (fechaNow - fechaLastTimeDate)/1000;
+        $('.banner').append("<br>"+diferencia.toFixed()+" segundos desde a ultima vez que visitou a paxina");
+        if (diferencia < 7 * 24 * 60 * 60) {
+          $('.banner').css({ "display": "block", "background": "green" })
+        } else {
+          $('.banner').css({ "display": "block", "background": "red" })
+        }
+      } else {
+        username = prompt("Please enter your name:", "");
+        if (username != "" && username != null) {
+          setCookie("username", username, 365);
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

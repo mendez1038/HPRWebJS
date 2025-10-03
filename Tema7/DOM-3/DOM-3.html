@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <title>DOM-3</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="DOM-3.css"/>
+  <script type="text/javascript" src="DOM-3.js"></script>
+ </head>
+ <body>
+        <form action="/action_page.php" method="GET">
+            <fieldset>
+                <legend class="color">Datos Personales</legend>
+                <div>Nombre:</div>
+                <input type="text" name="nombre" id="nombre" size="25" maxlength="100" required placeholder="Javier"></input>
+                <div>Apellidos:</div>
+                <input type="text" name="apellidos" id="apelidos" size="25" maxlength="100" required placeholder="Gomez Couselo"></input>
+                <div>Email:</div>
+                <input type="email" name="email" id="email" size="25" maxlength="255" required placeholder="javiergomezcouselo@gmail.com"></input>
+                <div>Teléfono:</div>
+                <input type="tel" name="tel" id="tel" size="25" maxlength="255" required placeholder="612612612"></input>
+                <div>Fecha de nacimiento:</div>
+                <input type="text" name="fechanacimiento" id="fecha" size="25" maxlength="255" required placeholder="29/03/1998"></input>
+                <div id="aliniar"><input type="button" value="Validar datos" onclick="comprobar()"></div>
+            </fieldset>
+        </form>
+        <fieldset id="colorfieldrojo">
+                <legend class="color2">Datos Incorrectos</legend>
+                <p id="nin"></p>
+                <p id="ain"></p>
+                <p id="ein"></p>
+                <p id="tin"></p>
+                <p id="fin"></p>
+        </fieldset>
+        <fieldset id="colorfieldazul">
+                <legend class="color3">Datos Correctos</legend>
+                <p id="nco"></p>
+                <p id="aco"></p>
+                <p id="eco"></p>
+                <p id="tco"></p>
+                <p id="fco"></p>
+        </fieldset>
+ </body>
+</html>
