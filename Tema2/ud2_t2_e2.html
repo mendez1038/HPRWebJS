@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Bruxula</title>
+  <meta charset="utf-8" />
+  <script src="micodigo.js"></script>
+  <style>
+  #myImage {
+    width:300px;
+    height: 400px;
+  }
+  .lado{
+    width: 50px;
+    position: relative;
+    bottom: 180px;
+  }
+  .centro {
+    position: relative;
+    left: 180px;
+  }
+  </style>
+</head>
+<body>
+  <h1>Esto é unha brúxula</h1>
+  <p>Indica os puntos cardinais</p>
+  <button type='button' class="centro" onclick="norte()">Norte</button>
+  <br>
+  <button type='button' class="lado" onclick="oeste()">Oeste</button>
+  <img id="myImage" src="./img/04-Brujula.png">
+  <button type='button' class="lado" onclick="este()">Este</button>
+  <br>
+  <button type='button' class="centro" onclick="sur()">Sur</button>
+</body>
+</html>

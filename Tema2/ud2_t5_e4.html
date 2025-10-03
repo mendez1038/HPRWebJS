@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Bucles 4</title>
+  <meta charset="utf-8" />
+  <script src="micodigo.js"></script>
+</head>
+
+<body>
+  <h1>Bucles 4: máquina rexistradora.</h1>
+  <p>Fai un programa que simule unha máquina rexistradora. Nun lugar meterase o importe, outro amosará a cantidade
+    acumulada cando se pulse un botón de mercar. Ao final ao pulsar un botón imprimira o tiquet co resumo da compra.</p>
+  <h2>Maquina Rexistradora</h2>
+  <hr>
+  <label for="importe">Importe </label><input type="text" name="importe" id="importe" size="5">
+  <label for="subtotal">Subtotal </label><input type="text" name="subtotal" id="subtotal" size="5"><br>
+  <input type="button" name="comprar" id="comprar" value="Comprar" onclick="comprar()"><br>
+  <input type="button" name="obter" id="obter" value="Obter Ticket" onclick="obter(), location.reload(true)"><br>
+</body>
+
+</html>

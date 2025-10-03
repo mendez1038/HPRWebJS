@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>SONIDOS</title>
+    <meta charset="utf-8" />
+    <script src="micodigo.js"></script>
+    <style>
+      .img {
+        height:150px;
+        width:150px;
+        margin: 10px;
+        display: inline-block;
+      }
+    </style>
+</head>
+<body>
+    <h1>Sonidos</h1>
+    <audio id="myAudio">
+      <source src="sound/proyector.wav" type="audio/wav">
+    </audio>
+    <img id="imagen0" src= img/0.png class="img" onclick="playAudio(0)" ondblclick="desaparecer(imagen0)"/>
+    <img id="imagen1" src= img/1.png class="img" onclick="playAudio(1)" ondblclick="desaparecer(imagen1)"/>
+    <img id="imagen2" src="img/2.png" class="img" onclick="playAudio(2)" ondblclick="desaparecer(imagen2)"/>
+    <img id="imagen3" src="img/3.png" class="img" onclick="playAudio(3)" ondblclick="desaparecer(imagen3)"/>
+    <img id="imagen4" src="img/4.png" class="img" onclick="playAudio(4)" ondblclick="desaparecer(imagen4)"/>
+    <img id="imagen5" src="img/5.jpg" class="img" onclick="playAudio(5)" ondblclick="desaparecer(imagen5)"/>
+    <img id="imagen6" src="img/6.jpg" class="img" onclick="playAudio(6)" ondblclick="desaparecer(imagen6)"/>
+    <img id="imagen7" src="img/7.jpg" class="img" onclick="playAudio(7)" ondblclick="desaparecer(imagen7)"/>
+    <img id="imagen8" src="img/8.jpg" class="img" onclick="playAudio(8)" ondblclick="desaparecer(imagen8)"/>
+    <img id="imagen9" src="img/9.jpg" class="img" onclick="playAudio(9)" ondblclick="desaparecer(imagen9)"/>
+    <button onclick="location.reload(true)" style="display: block">Recargar páxina</button>
+</body>
+</html>
