@@ -1,0 +1,193 @@
+<html>
+<head>
+  <script src="main.js">
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <style>
+    .tpl-gallery {
+      width: 300px;
+      height: 420px;
+      border: 1px solid blue;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+    .sta-gallery_width {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      outline: 1px solid magenta;
+    }
+    .sta-gallery_img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: red;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .sta-gallery_scroll {
+      position: absolute;
+      bottom: 9px;
+      left: 10px;
+      right: 10px;
+      background: #c2c2c2;
+      height: 2px;
+      display: none;
+    }
+    .sta-gallery_scrollbar {
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: 0;
+      width: 10%;
+      background: #c94;
+      transition: 1s;
+    }
+    .sta-gallery_buttons {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      display: none;
+    }
+    .sta-gallery_left {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      height: 20px;
+      width: 60px;
+      background: black;
+    }
+    .sta-gallery_right {
+      position: absolute;
+      top: -10px;
+      right: 0;
+      height: 20px;
+      width: 60px;
+      background: black;
+    }
+    .tpl-gallery.sta-moreImages .sta-gallery_scroll,
+    .tpl-gallery.sta-moreImages .sta-gallery_buttons {
+      display: block;
+    }
+    .tpl-gallery.sta-moreImages .sta-gallery_width {
+      bottom: 20px;
+    }
+  </style>
+
+  <div class="tpl-gallery">
+    <div class="sta-gallery_buttons">
+      <button class="sta-gallery_left"></button>
+      <button class="sta-gallery_right"></button>
+    </div>
+    <div class="sta-gallery_scroll">
+      <div class="sta-gallery_scrollbar"></div>
+    </div>
+    <div class="sta-gallery_width"></div>
+  </div>
+
+  <script>
+    var crearGaleria = (function () {
+      var posi = 0,
+        obj = null;
+      var divcreado = function () {
+        return $("<div></div>", { class: "sta-gallery_img", style: "background-image: url('" + obj.photos[posi] + "')" });
+      };
+      var control = function (a) {
+        if (a.obj && a.parent && a.photos && a.photos.length) {
+          obj = _.clone(a);
+          cargaIniciar();
+        } else {
+          console.trace("Faltan valores")
+        };
+      };
+      function cargaIniciar() {
+        $(obj.parent).append(divcreado);
+        if (obj.photos.length > 1) {
+          if (obj.scrollbar) {
+            $(obj.scrollbar).css("width", (100 / obj.photos.length) + "%");
+            eventosBotones()
+          }
+          $(obj.obj).addClass("sta-moreImages");
+        };
+      };
+      function eventosBotones() {
+        //1.- //crear evento left --> llama funcion moverLeft y moverScroll
+        //2.- //crear evento rigth --> llama funcion moverRigth y moverScroll
+        $(obj.buttonLeft).click(function () { moverLeft()});
+        $(obj.buttonRight).click(function () { moverRigth()});
+        
+      }
+      function moverScroll() {
+        console.log(posi);
+        for (var i = 0; i < obj.photos.length; i++) {
+          if (i == posi) {
+            $(obj.scrollbar).css("left", (100 / obj.photos.length) * posi + "%");
+          }
+        }
+        //5.-
+        //partiendo de la variable posi, posicionar el left del scrollBar mediante una animacion
+      }
+      function moverLeft() {
+        if (posi == 0) { posi = obj.photos.length - 1; } else { posi--; }
+        console.log("Posicion Right: " + posi);
+        divcreado().css("left", "-100%");
+        $(obj.parent).children().animate({ left: "100%" }, 1000, function () { $(obj.parent).children().first().remove(); });
+        $(obj.parent).append(divcreado);
+        //divcreado.animate({ left: "0px" },1000);
+        moverScroll();
+        //3.-
+        //crear div con imagen siguiente (si la imagen siguiente no existe poner la posicion 0)
+        //darle al div creado left 100%
+        //animacion sobre el contenido actual a left -100%
+        //insertar eL div creado en el html 
+        //animacion sobre div creado a left = 0
+      }
+      function moverRigth() {
+        if (posi == obj.photos.length - 1) { posi = 0; } else { posi++; }
+        console.log("Posicion Left: " + posi)
+        divcreado().css("left", "100%");
+        $(obj.parent).children().animate({ left: "-100%" }, 1000, function () { $(obj.parent).children().first().remove(); });
+        $(obj.parent).append(divcreado);
+        //divcreado.animate({ left: "0px" },1000);
+        moverScroll();
+        //4.-
+        //crear div con imagen anterior (si la imagen anterior no existe poner la ultima posicion)
+        //darle al div creado left -100%
+        //animacion sobre el contenido actual a left 100%
+        //insertar en div creado en el html
+        //animacion sobre div creado a left = 0
+      }
+      return control;
+    })();
+    var fotos = ["https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg", "https://biotrendies.com/wp-content/uploads/2017/09/errores-habituales-desayuno-evitar.jpg", "http://www.sarkarinaukrisearch.in/wp-content/uploads/2018/12/whatsapp-dp-images-51.jpg",
+      "https://d25rq8gxcq0p71.cloudfront.net/language-guide/758/pepperoni%20pizza.jpg", "https://image.shutterstock.com/image-photo/large-beautiful-drops-transparent-rain-600w-668593321.jpg"];
+    (function (o, arr, $, h) {
+      if (o && arr) {
+        var obj = {
+          obj: o,/*esta*/
+          parent: o.querySelector(".sta-gallery_width"), /*esta*/
+          buttonLeft: o.querySelector(".sta-gallery_left"),
+          buttonRight: o.querySelector(".sta-gallery_right"),
+          scrollbar: o.querySelector(".sta-gallery_scrollbar"),
+          photos: arr // necesaria
+        };
+        console.log(crearGaleria)
+        crearGaleria(obj)
+      }
+    })(document.querySelector(".tpl-gallery"), fotos, jQuery, hotusa());
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>HPR Web</title>
+        <style>
+            body{margin: 0;}
+            .presentacion {background-position: top;background-size: cover;background-repeat: no-repeat;background-color: rgb(218, 209, 209);position: relative;overflow: hidden;}
+            .max{max-width: 1280px;margin: 0 auto;}
+            .menu{background: black;color: gold;height: 40px;opacity: 0.6;width: calc(100% - 30px);padding: 10px 15px 0}
+            .logo{text-align: left;background-position: center;background-size: contain;background-repeat: no-repeat;width: 30%;display: inline-block;vertical-align: top;}
+            .logo img {width: 40px;height: 30px;}
+            .nombre{text-transform: uppercase;font: 11px/16px 'Times New Roman', sans-serif;text-align: center;width: 40%;display: inline-block;vertical-align: top;}
+            .redes{text-align: right;width: 30%;display: inline-block;vertical-align: top;}
+            .redes img{width: 20px;height: 20px;}
+            .desplegable ul li .premios li{display: block;width: auto;min-height: 0;}
+            .desplegable ul li {display: inline-block;width: 20%;vertical-align: top;min-height: 50px;position: relative;}
+            .desplegable ul li:hover {background: black;color: #fff;}
+            .desplegable .premios li:hover {background: yellow;color: green;}
+            .desplegable ul li a{padding: 15px;position: absolute;left: calc(50% - 65px);min-width: 130px;}
+            .desplegable{background: #fff;color: #000;border: 1px dotted black;text-align: center;}
+            .desplegable ul{padding: 0;margin: 0;}
+            .animacion{min-height: 800px;background-position: center;background-size: cover;background-repeat: no-repeat;position: relative;}
+            .show{display: block!important;position: absolute;bottom: -55px;background: red;width: 100%;}
+            .premios{display: none;}
+            .sesion input{border-radius: 12px;text-align: center;margin: 5px 0;}
+            .sesion button{border-radius: 12px;background: aqua;color: orangered;padding: 2px 15px;}
+            .sesion button:hover{background: yellow;color: black;padding: 4px 17px;transition: .3s;}
+            .animacion img{position: absolute;}
+            .animacion img:first-of-type{left: -416px;}
+            .animacion .ball{bottom: 0;left: calc(50% - 225px / 2);}
+            .animacion img:last-of-type{right: -416px;}
+        </style>
+        <script src="../jquery-3.4.1.min.js"></script>
+        
+    </head>
+    <body onload="animacion()"> 
+        <div class="presentacion">
+            <div class="max">
+                <div class="menu">
+                    <div class="logo">
+                        <a href="./ud8_t2_e4.html"><img src="./images/logo.jpg" alt="logo"></a>
+                    </div><div class="nombre">
+                        Marathon Baloncesto <br>3x3
+                    </div><div class="redes">
+                        <a target="_blank" href="https://twitter.com/CBChantada">
+                            <img src="./images/tw.png" alt="Twitter"></a>
+                        </div>
+                </div>
+                <div class="desplegable">
+                    <ul>
+                        <li>
+                            <a>Lugar</a></li><li>
+                            <a>Últimos ganadores</a></li><li> 
+                            <a>Premios</a>
+                            <ul class="premios">
+                                <li>1º 150€</li>
+                                <li>2º 100€</li>
+                                <li>3º 50€</li>
+                            </ul>
+                        </li><li>
+                            <a>Invitados VIP</a></li><li>
+                            <a>Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sesion">
+                    <input type="email" name="user" id="" placeholder="Email">
+                    <input type="password" name="pass" id="" placeholder="Password">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="animacion" style="background-image: url('./images/fondo.jpg')">
+                    <img src="./images/james.jpg" alt="player">
+                    <img src="./images/ball.jpg" alt="ball" class="ball">
+                    <img src="./images/davis.jpg" alt="player2">
+                </div>
+                
+            </div>
+        </div>
+    </body>
+    <script>
+            
+            $(document).ready(function(){
+            $('.desplegable ul li a').click(function() {
+                $('.desplegable ul li .premios').addClass("show");
+            });
+            window.onclick = function(event) {
+                    if (!event.target.matches('.desplegable ul li a')) {
+                        var menudess = document.getElementsByClassName("premios");
+                        var i;
+                        for (i = 0; i < menudess.length; i++) {
+                        var openmenudes = menudess[i];
+                        if (openmenudes.classList.contains('show')) {
+                            openmenudes.classList.remove('show');
+                        }
+                        }
+                    }
+                    }
+            });
+            function animacion() {
+                $(".animacion img:first-of-type").animate({left: '0'},2000);
+                $(".animacion img:last-of-type").animate({right: '0'},2000);
+                $(".animacion .ball").animate({bottom: '50%'},1000);
+            }
+            
+        </script>
+</html>
+                    

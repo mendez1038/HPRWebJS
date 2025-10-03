@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario</title>
+    <link rel="stylesheet" type="text/css" href="Ajax3.css" media="all" />
+    <script type="text/javascript" src="Ajax3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bordetodo">
+        <h1 class="h1">Habitación</h1>
+        <div id="img"></div>
+        <div id="datos">
+            <div id="nome">
+                <p>Nome:</p>
+            </div>
+            <div id="nome2"></div>
+            <div id="prezo">
+                <p>Prezo:</p>
+            </div>
+            <div id="prezo2"></div>
+            <div id="prezo3">
+                <p>€/noite</p>
+            </div>
+            <h1 class="h1">Calendario</h1>
+            <h3 id="estilo123">Un "click" = FACER RESERVA
+                <pre> </pre> Dóus "clicks" = ANULAR RESERVA</h3>
+            <br /><br />
+            <div id="calendario">
+                <div id="anterior" onclick="mesantes()"></div>
+                <div id="posterior" onclick="mesdespues()"></div>
+                <h2 id="titulos"></h2>
+                <table id="diasc">
+                    <tr id="fila0">
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr id="fila1">
+                        <td onclick="cambiarcolor(1)" ondblclick="quitar(1)" id="th1"></td>
+                        <td onclick="cambiarcolor(2)" ondblclick="quitar(2)" id="th2"></td>
+                        <td onclick="cambiarcolor(3)" ondblclick="quitar(3)" id="th3"></td>
+                        <td onclick="cambiarcolor(4)" ondblclick="quitar(4)" id="th4"></td>
+                        <td onclick="cambiarcolor(5)" ondblclick="quitar(5)" id="th5"></td>
+                        <td onclick="cambiarcolor(6)" ondblclick="quitar(6)" id="th6"></td>
+                        <td onclick="cambiarcolor(7)" ondblclick="quitar(7)" id="th7"></td>
+                    </tr>
+                    <tr id="fila2">
+                        <td onclick="cambiarcolor(8)" ondblclick="quitar(8)" id="th8"></td>
+                        <td onclick="cambiarcolor(9)" ondblclick="quitar(9)" id="th9"></td>
+                        <td onclick="cambiarcolor(10)" ondblclick="quitar(10)" id="th10"></td>
+                        <td onclick="cambiarcolor(11)" ondblclick="quitar(11)" id="th11"></td>
+                        <td onclick="cambiarcolor(12)" ondblclick="quitar(12)" id="th12"></td>
+                        <td onclick="cambiarcolor(13)" ondblclick="quitar(13)" id="th13"></td>
+                        <td onclick="cambiarcolor(14)" ondblclick="quitar(14)" id="th14"></td>
+                    </tr>
+                    <tr id="fila3">
+                        <td onclick="cambiarcolor(15)" ondblclick="quitar(15)" id="th15"></td>
+                        <td onclick="cambiarcolor(16)" ondblclick="quitar(16)" id="th16"></td>
+                        <td onclick="cambiarcolor(17)" ondblclick="quitar(17)" id="th17"></td>
+                        <td onclick="cambiarcolor(18)" ondblclick="quitar(18)" id="th18"></td>
+                        <td onclick="cambiarcolor(19)" ondblclick="quitar(19)" id="th19"></td>
+                        <td onclick="cambiarcolor(20)" ondblclick="quitar(20)" id="th20"></td>
+                        <td onclick="cambiarcolor(21)" ondblclick="quitar(21)" id="th21"></td>
+                    </tr>
+                    <tr id="fila4">
+                        <td onclick="cambiarcolor(22)" ondblclick="quitar(22)" id="th22"></td>
+                        <td onclick="cambiarcolor(23)" ondblclick="quitar(23)" id="th23"></td>
+                        <td onclick="cambiarcolor(24)" ondblclick="quitar(24)" id="th24"></td>
+                        <td onclick="cambiarcolor(25)" ondblclick="quitar(25)" id="th25"></td>
+                        <td onclick="cambiarcolor(26)" ondblclick="quitar(26)" id="th26"></td>
+                        <td onclick="cambiarcolor(27)" ondblclick="quitar(27)" id="th27"></td>
+                        <td onclick="cambiarcolor(28)" ondblclick="quitar(28)" id="th28"></td>
+                    </tr>
+                    <tr id="fila5">
+                        <td onclick="cambiarcolor(29)" ondblclick="quitar(29)" id="th29"></td>
+                        <td onclick="cambiarcolor(30)" ondblclick="quitar(30)" id="th30"></td>
+                        <td onclick="cambiarcolor(31)" ondblclick="quitar(31)" id="th31"></td>
+                        <td onclick="cambiarcolor(32)" ondblclick="quitar(32)" id="th32"></td>
+                        <td onclick="cambiarcolor(33)" ondblclick="quitar(33)" id="th33"></td>
+                        <td onclick="cambiarcolor(34)" ondblclick="quitar(34)" id="th34"></td>
+                        <td onclick="cambiarcolor(35)" ondblclick="quitar(35)" id="th35"></td>
+                    </tr>
+                    <tr id="fila6">
+                        <td onclick="cambiarcolor(36)" ondblclick="quitar(36)" id="th36"></td>
+                        <td onclick="cambiarcolor(37)" ondblclick="quitar(37)" id="th37"></td>
+                        <td onclick="cambiarcolor(38)" ondblclick="quitar(38)" id="th38"></td>
+                        <td onclick="cambiarcolor(39)" ondblclick="quitar(39)" id="th39"></td>
+                        <td onclick="cambiarcolor(40)" ondblclick="quitar(40)" id="th40"></td>
+                        <td onclick="cambiarcolor(41)" ondblclick="quitar(41)" id="th41"></td>
+                        <td onclick="cambiarcolor(42)" ondblclick="quitar(42)" id="th42"></td>
+                    </tr>
+                </table>
+                <div id="fechaactual">
+                    <p onclick="actualizar()">Hoxe: </p>
+                </div>
+                <div id="buscafecha">
+                    <form action="#" name="buscar">
+                        <p><b>Mes:</b>
+                            <select name="buscames">
+                                <option value="0">Xaneiro</option>
+                                <option value="1">Febreiro</option>
+                                <option value="2">Marzo</option>
+                                <option value="3">Abril</option>
+                                <option value="4">Maio</option>
+                                <option value="5">Xuño</option>
+                                <option value="6">Xullo</option>
+                                <option value="7">Agosto</option>
+                                <option value="8">Setembro</option>
+                                <option value="9">Outubro</option>
+                                <option value="10">Novembro</option>
+                                <option value="11">Decembro</option>
+                            </select>
+                            <b>Ano:</b>
+                            <input type="text" name="buscaanno" maxlength="4" size="4" />
+
+                            <input type="button" value="BUSCAR" onclick="mifecha()" />
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+            <div id="cuadrado6">
+                <div id="cuadrado"></div>
+                <div id="cuadrado3">Día actual</div>
+            </div>
+            <div id="cuadrado5">
+                <div id="cuadrado2"></div>
+                <div id="cuadrado4">Día reservado</div>
+            </div>
+
+            <div><button type="button" onclick="location.href='./tabla.html'" id="button2">Calendario Anual</button></div>
+
+            <div><button type="button" onclick="location.href='../index.html'" id="button">Volver</button></div>
+
+
+            <div id="detalles"></div>
+            <div id="detalles2"></div>
+            <div id="detalles3"></div>
+            <div id="detalles4"></div>
+
+            
+        </div>
+</body>
+
+</html>

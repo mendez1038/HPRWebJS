@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Exercizo Cambio de estilos</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="../jquery-3.4.1.min.js"></script>
+    <script>
+      $(document).ready(function(){ 
+        $("a#myId1").click(function(){
+          $("link").attr("href","style1.css");
+        });
+        $("a#myId2").click(function(){
+          $("link").attr("href","style2.css");
+        }); 
+        $("a#myId3").click(function(){
+          $("link").attr("href","style.css");
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <h1>Cambios de estilos con jQuery</h1>
+    <p>Realiza una práctica con uno de tus diseños donde se vea el cambio interactivo de estilos .css</p>
+
+    <a id="myId1">Cambiar estilo a style1.css</a>
+    <a href="#" id="myId2">Cambiar estilo a style2.css</a>
+    <a href="#" id="myId3">Cambiar estilo a style.css</a>
+
+</body>
+</html>  

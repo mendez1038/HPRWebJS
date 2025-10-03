@@ -1,0 +1,104 @@
+#ficha{
+    font-family: 'Bangers', cursive;
+    position: relative;
+    background-color: rgb(255, 200, 20);
+    font-size: 60px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    z-index: -1;
+    -webkit-box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+    box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+}
+body{
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    background-image: url("img/fondo.jpg");
+}
+#volver{
+    font-family: 'Bangers', cursive;
+    position: relative;
+    color: red;
+    font-size: 50px;
+    top: -80px;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    
+}
+a{
+    color: red;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}
+.borde{
+    padding-top: 5px;
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: white;
+}
+#borde2{
+    position: relative;
+    border: 5px solid black;
+    display: block;
+    padding-bottom: 15px;
+    top: 20px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    left: -8%;
+    background-color: rgb(255, 218, 224);
+}
+#imagenfoto{
+    position: relative;
+    height: 180px;
+    width: 160px;
+    top: -263px;
+    border: 5px solid black;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    left: 12%;
+}
+#imagenes{
+    position: relative;
+    display: inline-block;
+    top: -200px;
+}
+#f1{
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+#f2{
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+#f3{
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+#f4{
+    float: left;
+    width: 55px;
+    height: 55px;
+}
+.tamaño{
+    height: 50px;
+    width: 50px;
+}
+.subrayado{
+    border: 2px solid black;
+    background-color: rgb(255, 238, 80);
+    width: 150px;
+    display: inline-block;
+    position: relative;
+}

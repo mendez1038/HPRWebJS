@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(182, 182, 182);
+    text-align: center;
+}
+
+#material{
+    font-family: 'Bangers', cursive;
+    position: relative;
+    border: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    width: 200px;
+    background-color: black;
+    font-size: 40px;
+    color: white;
+    top: 100px;
+    -webkit-box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+    box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+}
+#ficha{
+    font-family: 'Bangers', cursive;
+    position: relative;
+    background-color: rgb(255, 200, 20);
+    font-size: 60px;
+    width: 275px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    top: 98px;
+    z-index: -1;
+    -webkit-box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+    box-shadow: -4px 6px 7px -2px rgba(0,0,0,0.75);
+}
+#entrar{
+    font-family: 'Bangers', cursive;
+    position: relative;
+    color: red;
+    font-size: 50px;
+    top: 150px;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    
+}
+a{
+    color: red;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+}

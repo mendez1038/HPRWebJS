@@ -1,0 +1,20 @@
+body {
+  color: rgb(29, 104, 189);
+}
+h1 {
+  font: 38px 'Lora', serif;
+}
+p {
+  font: bold 15px 'Montserrat';
+}
+a {
+  text-decoration: none;
+  color: rgb(29, 104, 189);
+  margin: 10px 0;
+  font-size: 16px;
+  display: block;
+}
+a:hover {
+  text-decoration: underline;
+  color: rgb(255, 0, 221);
+}

@@ -1,0 +1,20 @@
+body {
+  color: rgb(158, 158, 46);
+}
+h1 {
+  font: 38px 'Calibri', serif;
+}
+p {
+  font: bold 15px 'Lato';
+}
+a {
+  text-decoration: none;
+  color: rgb(158, 158, 46);
+  margin: 10px 0;
+  font-size: 16px;
+  display: block;
+}
+a:hover {
+  text-decoration: underline;
+  color: orange;
+}

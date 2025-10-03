@@ -1,0 +1,11 @@
+$(document).ready(function(){ 
+  $("a#myId1").click(function(){
+    $("link").attr("href","style1.css");
+  });
+  $("a#myId2").click(function(){
+    $("link").attr("href","style2.css");
+  }); 
+  $("a#myId3").click(function(){
+    $("link").attr("href","style.css");
+  });
+});

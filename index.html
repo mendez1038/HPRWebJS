@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link  rel="icon"   href="favico/logo.ico" type="image/x-icon" />
+	<title>HPR Web</title>
+	<style>
+		body {margin: 0;padding: 10px;}
+		h1 {font-family: Arial, Helvetica, sans-serif;}
+		a {text-decoration: none;color: #000;font: italic 13px Arial, Helvetica, sans-serif;}
+		a:hover {text-decoration: underline;color: violet;transition: 0.4s;}
+		p {font: bold 14px Arial, Helvetica, sans-serif;}
+		ol{padding-inline-start: 70px;}
+		img{display: none;}
+		@media(min-width: 601px){
+			ol{padding-inline-start: 40px;}
+		}
+		.mySlides {display: none;}
+		.img {vertical-align: middle;min-height: 500px;background-size: contain;background-position: center;background-repeat: no-repeat;background-color: #000;-webkit-box-shadow: inset 0px -50px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px -50px 10px 0px rgba(0,0,0,0.75);
+box-shadow: inset 0px -50px 10px 0px rgba(0,0,0,0.75);}
+		.slideshow-container {max-width: 1000px;position: relative;margin: auto;font-family: Verdana, sans-serif;}
+		.slideshow-container *{box-sizing: border-box;}
+		.text {color: #f2f2f2;font-size: 15px;padding: 8px 12px;position: absolute;bottom: 8px;width: 100%;text-align: center;}
+		.numbertext {color: #f2f2f2;font-size: 12px;padding: 8px 12px;position: absolute;top: 0;}
+		.dot {height: 15px;width: 15px;margin: 0 2px;background-color: #bbb;border-radius: 50%;display: inline-block;transition: background-color 0.6s ease;}
+		.map{max-width: 1000px;margin: 0 auto;}
+		.active {background-color: #717171;}		
+		.fade {-webkit-animation-name: fade;-webkit-animation-duration: 2s;animation-name: fade;animation-duration: 2s;}
+		@-webkit-keyframes fade {from {opacity: .4} to {opacity: 1}}
+		@keyframes fade {from {opacity: .4} to {opacity: 1}}
+		@media only screen and (max-width: 300px) {.text {font-size: 11px}}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Bienvenidos a HPR!</h1>
+		<hr>
+	</header>
+	<nav>
+		<ol>
+			<li><a href="./accesibilidade/accesibilidade.html">Accsesibilidade</a></li>
+			<li><a href="./Tema2/tema2.html"><b>Tema 2:</b> Sonidos, Bucles, etc...</a></li>
+			<li><a href="./Tema3/tema3.html"><b>Tema 3:</b> Strings, Arrays, Window e Date</a></li>
+			<li><a href="./Tema4/tema4.html"><b>Tema 4:</b> Expresións Regulares e Cookies</a></li>
+			<li><a href="./Tema5/tema5.html"><b>Tema 5:</b> Eventos</a></li>
+			<li><a href="./Tema6/tema6.html"><b>Tema 6:</b> Actividades Integradas</a></li>
+			<li><a href="./Tema7/tema7.html"><b>Tema 7:</b> DOM</a></li>
+			<li><a href="./Tema8/tema8.html"><b>Tema 8:</b> Ajax e JQuery</a></li>
+			<li><a href="./examenXabi/index.html" target="_blank"><b>Examen Setembro</b></a></li>
+			<li><a href="./Draft/main.html" target="_blank"><b>Sorteo</b></a></li>
+			<li><a href="./Draft/main-v2.html" target="_blank"><b>Sorteo versión 2</b></a></li>
+			<li><a href="./Draft/Ejercicio5/BORRADORmain.html" target="_blank"><b>Sorteo Configurable</b></a></li>
+			<li><a href="./fantasy/excel_fantasy.html" target="_blank"><b>Contabilidad fantasy</b></a></li>
+			<li><a href="../Remaquetacion/taskList_limpio.html" target="_blank"><b>Lista Tareas</b></a></li>
+		</ol>
+	</nav>
+	<h3>Countries visited map</h3>
+	<div class="map">
+		<div id="mapdiv" style="width: 1000px; height: 450px;"></div>
+		<div style="width: 1000px; font-size: 70%; padding: 5px 0; text-align: center; background-color: #535364; margin-top: 1px; color: #B4B4B7;">
+			<a href="https://www.amcharts.com/visited_countries/" style="color: #B4B4B7;">Create your own visited countries map</a> or check out the <a href="https://www.amcharts.com/" style="color: #B4B4B7;">JavaScript Charts</a>.
+		</div>
+	</div>
+	<div class="galeria">		
+		<h3>Galeria</h3>
+		<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <div class="numbertext">27/11/2007</div>
+		  <div class="img" style="width:100%;background-image: url('./imagenes/paris.jpg');"></div>
+		  <div class="text">Paris, Francia</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">28/07/2012</div>
+			<div class="img" style="width:100%;background-image: url('./imagenes/valenca.JPG');"></div>
+			<div class="text">Valença, Portugal</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">12/05/2013</div>
+			<div class="img" style="width:100%;background-image: url('./imagenes/londres.jpg');"></div>
+			<div class="text">London, Gran Bretaña</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">27/02/2017</div>
+			<div class="img" style="width:100%;background-image: url('./imagenes/praga.jpg');"></div>
+			<div class="text">Praga, República Checa</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">02/03/2017</div>
+			<div class="img" style="width:100%;background-image: url('./imagenes/viena.jpg');"></div>
+			<div class="text">Viena, Austria</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">03/03/2017</div>
+			<div class="img" style="width:100%;background-image: url('./imagenes/bratislava.jpg');"></div>
+			<div class="text">Bratislava, Eslovaquia</div>
+		</div>
+		<div class="mySlides fade">
+			<div class="numbertext">04/03/2017</div>
+			<div class="img" style="width:100%;background-image: url('./imagenes/barcelona.JPG');"></div>
+			<div class="text">Barcelona, España</div>
+		  </div>
+		  <div class="mySlides fade">
+			  <div class="numbertext">17/09/2023</div>
+			  <div class="img" style="width:100%;background-image: url('./imagenes/indonesia.jpg');"></div>
+			  <div class="text">Gili Islands, Indonesia</div>
+			</div>
+		  </div>
+		</div>
+		<br>
+		<div style="text-align:center">
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		  <span class="dot"></span> 
+		</div>
+	</div>
+	<footer>
+		<label>Web made by David Méndez</label><br>
+		<label for="">&copy; 2019 HPR Web, Inc. Todos los derechos reservados</label>
+	</footer>
+	<script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+	<script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+	<script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var map = AmCharts.makeChart("mapdiv", {
+			type: "map",
+			theme: "dark",
+			projection: "eckert5",
+			panEventsEnabled: true,
+			backgroundColor: "#535364",
+			backgroundAlpha: 1,
+			zoomControl: {
+			zoomControlEnabled: true
+			},
+			dataProvider: {
+				map: "worldHigh",
+				getAreasFromMap: true,
+				areas:
+					[
+						{
+							"id": "PT",
+							"showAsSelected": true
+						},
+						{
+							"id": "AT",
+							"showAsSelected": true
+						},
+						{
+							"id": "CZ",
+							"showAsSelected": true
+						},
+						{
+							"id": "FR",
+							"showAsSelected": true
+						},
+						{
+							"id": "SK",
+							"showAsSelected": true
+						},
+						{
+							"id": "ES",
+							"showAsSelected": true
+						},
+						{
+							"id": "GB",
+							"showAsSelected": true
+						},
+						{
+							"id": "ID",
+							"showAsSelected": true
+						}
+					]
+			},
+			areasSettings: {
+				autoZoom: true,
+				color: "#B4B4B7",
+				colorSolid: "#84ADE9",
+				selectedColor: "#84ADE9",
+				outlineColor: "#666666",
+				rollOverColor: "#9EC2F7",
+				rollOverOutlineColor: "#000000"
+			}
+		});
+	</script>
+	<script>
+		var slideIndex = 0;
+		showSlides();
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 4000); // Change image every 2 seconds
+		}
+		</script>
+</body>
