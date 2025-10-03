@@ -1,0 +1,166 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Lottery Draft</title>
+</head>
+<body>
+        <div class="tpl-config" style="text-align: center"> 
+                <h1>Sorteo Web  <span>by David Mendez</span></h1>
+                <h2>Fecha del sorteo</h2>
+                <form action="">
+                <div>
+                  <label for="">Dia</label>
+                <select name="dia" id="dia">
+                  <option value="1"></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+                <label for="">Mes</label>
+                <select name="mes" id="mes">
+                  <option value="0"></option>
+                  <option value="0">Enero</option>
+                  <option value="1">Febrero</option>
+                  <option value="2">Marzo</option>
+                  <option value="3">Abril</option>
+                  <option value="4">Mayo</option>
+                  <option value="5">Junio</option>
+                  <option value="6">Julio</option>
+                  <option value="7">Agosto</option>
+                  <option value="8">Septiembre</option>
+                  <option value="9">Octubre</option>
+                  <option value="10">Noviembre</option>
+                  <option value="11">Diciembre</option>
+                </select>
+                <label for="">Año</label>
+                <select name="ano" id="ano">
+                  <option value="2019"></option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                </select>
+                </div>
+                <div style="margin-top: 10px;">
+                  <label for="">Hora</label>
+                <select name="hora" id="hora">
+                  <option value="0"></option>
+                  <option value="0">00</option>
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                </select>
+                <label for="">Min</label>
+                <select name="min" id="min">
+                  <option value="0"></option>
+                  <option value="0">00</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
+                  <option value="35">35</option>
+                  <option value="40">40</option>
+                  <option value="45">45</option>
+                  <option value="50">50</option>
+                  <option value="55">55</option>
+                </select>
+                <label for="">Segundos</label>
+                <select name="sec" id="sec">
+                  <option value="0"></option>
+                  <option value="0">00</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                  <option value="40">40</option>
+                  <option value="50">50</option>
+                </select>
+                </div>
+                <h2>Tiempo entre picks</h2>
+                <label for="">Segundos</label>
+                <select name="time" id="time">
+                  <option value="1"></option>
+                  <option value="1">1</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="30">30</option>
+                  <option value="60">60</option>
+                  <option value="90">90</option>
+                </select> <br><br>
+                <h2>Nombre del sorteo</h2>
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombre">
+                <br><br>
+                <input type="submit" id="botonCrearSorteo" value="Crear sorteo"> <br><br>
+                <h2>Ver sorteo</h2>
+                <label for="">Nombre del sorteo</label>
+                <input type="text" name="vernombre" id="vernombre">
+                <input type="submit" id="botonVerSorteo" value="Ver sorteo">
+                </form>
+        </div>
+                <div class="tpl-draft" style="display: none"> 
+                    <h1>Sorteo Draft Fantasy NBA  <span>by David Mendez</span></h1>
+                    <audio id="myAudio">
+                      <source src="" type="audio/wav">
+                    </audio>
+                    <div class="results"></div>
+                    <div class="verConfig">
+                      <button>Ver Configuracion</button>
+                    </div>
+                    <div id="contaAtras"></div>
+                    <div id="fin"></div>
+                    
+                </div>
+                <script src="jquery-3.4.1.min.js"></script>
+                <script src="BORRADOR.js"></script>
+</body>
+</html>
