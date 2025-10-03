@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<script src="date.js"></script>
+<script src="./jquery-3.4.1.min.js"></script>
+<head>
+    <title>Exercizo Date 4</title>
+    <meta charset="utf-8" />
+</head>
+<body >
+
+    <h1>Actividade Date 4</h1>
+    <p>Crea unha conta atrás dunha data en formato quedan aa ANOS mm MESES dd DIAS hh HORAS mm MINUTOS ss SEGUNDOS. Nota: a mensaxe será o máis reducida posible, é dicir, se quedan 5 horas e 40 minutos non hai por que amosar anos, meses e días.</p>
+    <input type="date" name="fecha" id="input"><button onclick="date4()">Go</button>
+    <div id="contaAtras"></div>
+    <div id="fin"></div>
+    <script>
+        /* DATE 4 */
+function contaAtras() {
+  var input = document.getElementById("input").value;
+  var fin = new Date(input);
+  var actual = new Date();
+  var ano, mes, dia, hora, min, sec,divConta;
+  $('#fin').html("Fecha fin da conta atrás: " + fin);
+  if (actual < fin) {
+    ano = fin.getFullYear() - actual.getFullYear();
+    mes = fin.getMonth() - actual.getMonth();
+    if (mes < 0) {mes=12+mes;ano=ano-1;};
+    dia = fin.getDate() - (actual.getDate());
+    if (dia < 0) {dia=30+dia;mes=mes-1;};
+    hora = fin.getHours() - (actual.getHours());
+    if (hora < 0) {hora=23+hora;dia=dia-1};
+    min = fin.getMinutes() - (actual.getMinutes());
+    if (min < 0) {min =60+min;hora=hora-1};
+    sec = fin.getSeconds() - actual.getSeconds();
+    if (sec < 0) {sec=60+sec;min=min-1;};
+    divConta = document.getElementById("contaAtras");
+    if (ano != 0) divConta.innerHTML = ano + " anos " + mes + " meses " + dia + " dias " + hora + " horas " + min + " minutos " + sec + " segundos";
+    if (ano == 0) divConta.innerHTML = mes + " meses " + dia + " dias " + hora + " horas " + min + " minutos " + sec + " segundos";
+    if (ano == 0 && mes == 0) divConta.innerHTML = dia + " dias " + hora + " horas " + min + " minutos " + sec + " segundos";
+    if (ano == 0 && mes == 0 && dia == 0) divConta.innerHTML = hora + " horas " + min + " minutos " + sec + " segundos";
+    if (ano == 0 && mes == 0 && dia == 0 && hora == 0) divConta.innerHTML = min + " minutos " + sec + " segundos";
+    if (ano == 0 && mes == 0 && dia == 0 && hora == 0 && min == 0) divConta.innerHTML = sec + " segundos";
+  } else {
+    divConta = document.getElementById("contaAtras");
+    divConta.innerHTML = "Conta atras finalizada";
+  }
+}
+function date4() {
+  setInterval(contaAtras, 1000);
+}
+    </script>
+</body>
+</html> 

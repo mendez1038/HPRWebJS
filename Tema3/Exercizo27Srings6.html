@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html lang=es>
+    <head>
+        <meta charset=utf-8>
+        <title>Strings 6</title>
+        <script>
+            function transformar(){
+                var frase=new String(document.getElementById("frase").value);
+                var encabezado;
+                var parrafoNegrita;
+                var i=frase.indexOf("/");
+                encabezado=frase.slice(0,i);
+                document.getElementById("encabezado").innerHTML=(encabezado);
+                frase=frase.slice(i+1,frase.length);
+                var j=frase.indexOf("/");
+                parrafoNegrita=frase.slice(0,j);
+                document.getElementById("parrafoNegrita").innerHTML=(parrafoNegrita.bold());
+                frase=frase.slice(j+1,frase.length);
+                document.getElementById("parrafoNormal").innerHTML=(frase);
+            }
+        </script>
+    </head>
+    <body>
+        <textarea cols="80" rows="4" id="frase">Introduce / aquí / la frase</textarea>
+        <br>
+        <button type="button" onClick="transformar()" value="Transformar">Transformar</button>
+        <br>
+        <h1 id="encabezado"></h1>
+        <br>
+        <p id="parrafoNegrita"></p>
+        <br>
+        <p id="parrafoNormal"></p>
+    </body>

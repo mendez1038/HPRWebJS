@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title> Window 3</title>
+        <meta charset="utf-8" />
+        <script>
+            var opciones = "width=400, height=400";
+            var banner = window.open("","",opciones);
+            banner.document.write("<p>A ventana popup ten "+banner.innerWidth+ "px de ancho \n e "+banner.innerHeight+"px de alto</p><button onclick=window.close()>Cerrar</button>");
+            banner.moveTo(500,500);
+        </script>
+    </head>
+    <body>
+        <h1>Actividade 3 de Window</h1>
+        <p>Deseña una página que permita abrir unha ventana que conteña un banner publicitario no medio e medio por enriba de todo o seu contido.O banner conterá un botón<br>
+        que permitirá o peche da mesma (window.innerWidth y window.innerHeight devuelven o ancho e o alto dunha ventana)</p>     
+    </body>
+</html>

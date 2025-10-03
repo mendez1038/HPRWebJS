@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html lang=es>
+    <head>
+        <meta charset=utf-8>
+        <title>Strings 2</title>
+        <h1>Introduce una frase para invertirla</h1>
+        <script>
+            function invertir(){
+                var frase=new String(document.getElementById("frase").value);
+                var fraseInvertida=new String();
+                var i=frase.length;
+                fraseInvertida="";
+                while(i>=0){
+                    fraseInvertida=fraseInvertida+frase.charAt(i);
+                    i--
+                }
+                document.getElementById("salida").innerHTML=fraseInvertida
+            }
+        </script>
+    </head>
+    <body>
+        <textarea cols="80" rows="4" id="frase">Introduce la frase</textarea>
+        <br>
+        <input type="button" onClick="invertir()" value="Invertir Frase">
+        <p id="salida"></p>
+    </body>
+    </html>

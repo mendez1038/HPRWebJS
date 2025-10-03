@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Window 4</title>
+  <meta charset="utf-8">
+
+  <script type="text/javascript">
+    var moverx = 0;
+    var movery = 180;
+    var nuevaVentana;
+    var anchoPantalla = window.innerWidth;
+    
+    var altoPantalla = screen.height;
+    
+    var positionY = altoPantalla / 2;
+    var verdadero = false;
+    var verdadero2 = false;
+    function cerrar(){
+      nuevaVentana.close()
+    } 
+    function ejecutar() {
+      nuevaVentana = window.open('', 'miNombre', 'width=300, height=300');
+      nuevaVentana.document.write('<p>Ventana que rebota</p>');
+      anchoNuevaVentana = nuevaVentana.outerWidth;
+      altoNuevaVentana = nuevaVentana.outerHeight;
+      nuevaVentana.focus();
+      nuevaVentana.moveTo(0, positionY);
+      nuevaVentana.setInterval(mover, 10);
+    }
+
+    function mover() {
+      
+      //Movimiento del eje X (false avanza, true retorcede)
+      if ((moverx >= anchoPantalla - anchoNuevaVentana) && (verdadero == false)) {
+        verdadero = true;
+      } else if (moverx <= 0) {
+        verdadero = false;
+      }
+
+      if (verdadero == true) {
+        moverx -= 4;
+      } else {
+        moverx += 4
+      }
+
+      //Movimiento del eje Y (false avanza, true retorcede)
+      if (movery >= altoPantalla - altoNuevaVentana - 50 && verdadero2 == false) {
+        verdadero2 = true;
+      } else if (movery <= 0) {
+        verdadero2 = false;
+      }
+
+      if (verdadero2 == true) {
+        movery -= 4;
+      }
+      else if (verdadero2 == false){
+        movery += 4
+      }
+
+      nuevaVentana.moveTo(moverx, movery);
+
+    }
+
+  </script>
+</head>
+
+<body>
+    <h1>Actividade 4 de Window</h1>
+    <p>Tomando como base o exemplo práctico 1 realiza una web na que salte un banner (contido publicitario) que vaia desplazándose pola pantalla e rebote ao chegar aos bordos da mesma.O banner conterá un botón de peche que ao pulsar nel fará que a ventana se peche.</p>
+
+  <button onclick="ejecutar()">Abrir Ventana</button>
+  <button onclick="cerrar()">Cerrar Ventana</button>
+
+
+</body>
+
+</html>

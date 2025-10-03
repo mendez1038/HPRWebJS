@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Strings 8</title>
+        <h1>Comprobar si la segunda frase está contenida en la primera y resaltar la coincidencia en mayusculas</h1>
+        <script>
+            function comparar(){
+                var frase1=new String(document.getElementById("frase1").value);
+                var frase2=new String(document.getElementById("frase2").value);
+                var compara1=frase1.toLowerCase();
+                var compara2=frase2.toLowerCase();
+                var comparacion=compara1.search(compara2);
+                var inicio=frase1.slice(0,comparacion);
+                var coincide=frase1.slice(comparacion,comparacion+frase2.length);
+                var frase3=inicio+coincide;
+                var final=frase1.slice(frase3.length);
+                var medio=coincide.toUpperCase();
+                if(comparacion<0){
+                    alert("No existen coincidencias");
+                }
+                else{
+                    document.getElementById("resultado").innerHTML=(inicio+medio+final);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <textarea cols="80" rows="4" id="frase1">Introduce aquí la primera frase</textarea>
+        <textarea cols="80" rows="4" id="frase2">Introduce aquí la segunda frase</textarea>
+        <br>
+        <button type="button" onClick="comparar()" value="Comparar">Comparar</button>
+        <br>
+        <p id="resultado"></p>
+    </body>

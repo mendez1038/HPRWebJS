@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+    <html lang=es>
+    <head>
+        <meta charset=utf-8>
+        <title>Strings 4</title>
+        <h1>Validar teléfono</h1>
+        <script>
+        function comprobar(){
+            var numero=new String(document.getElementById("numero").value);
+            var codigo=new String();
+            var final;
+            var principio;
+            if (numero.length>13||numero.length<9){
+                alert("Número incorrecto. Introduce un número de entre 9 y 13 dígitos");
+            }
+            else {
+                codigo=prompt("Introduce el código de tu país");
+            }
+            if(numero.length>9){
+                principio=numero.slice(0,9);
+                final=numero.slice(9,13);
+                document.getElementById("telefono").innerHTML=("+("+codigo+")"+principio+"["+final+"]");    
+            }
+            else{
+                document.getElementById("telefono").innerHTML=("+("+codigo+")"+numero);
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <textarea cols="80" rows="4" id="numero">Introduce el número de teléfono</textarea>
+        <br>
+        <input type="button" onClick="comprobar()" value="Mostrar número">
+        <p id="telefono"></p>
+    </body>

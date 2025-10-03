@@ -1,0 +1,34 @@
+<DOCTYPE html>
+    <html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <script type="text/javascript" src="ArrayBaraja.js"></script>
+
+    <body>
+        <h1>Arrays - Baraja</h1>
+        <p>Tomando como base as imaxes do exercicio feito coa baralla de cartas (Ver enunciado | Ver cartas) realiza unha páxina web que conteña o código en script que permita a través da pulsación de botóns:</p>
+        <p>a) Amosar toda a baralla</p>
+        <p>b) Embarallar e amosar todas as cartas embaralladas</p>
+        <p>c) Repartir as cartas entre 4 xogadores e amosar as cartas de cada un deles.</p>
+        <p>d) Recargar a páxina para que esté coma o principio</p>
+                
+                
+        <hr>
+        <button type="button" onclick="mostrarBaraja()">Mostrar baraja</button>
+        <button type="button" onclick="barajarBaraja()">Barajar baraja</button>
+        <button type="button" onclick="mostrarPalo()">Mostrar palo</button>
+        <hr>
+        <button type="button" onclick="repartirBaraja()">Repartir a los jugadores</button>
+        <button type="button" onclick="mostrarMano()">Mostrar mano de un xogador</button>
+        <button type="button" onclick="mostrarJugada()">Mostrar jugada</button>
+        <hr>
+        <button type="button" onclick="location.reload(true)"><h3>Recargar paxina</h3></button>
+        <hr>
+
+        <p id="cartas"></p>
+    </body>
+
+    </html>
